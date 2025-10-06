@@ -1,0 +1,29 @@
+Consignas
+1. Lectura y Exploración de Datos
+o Leer las hojas 1900s, 2000s y 2010s de movies.xls.
+o Mostrar las primeras 5 filas de la hoja 2000s.
+o Mostrar cuántas filas tiene la hoja 2010s.
+2. Unificación de Datos
+o Concatenar las tres hojas en un solo DataFrame llamado df_movies.
+o Guardar las primeras 10 filas de df_movies en una variable y mostrarlas.
+3. Análisis
+o Contar cuántas películas hay por país (Country) en df_movies.
+o Mostrar el Top 5 directores con más películas en la hoja 2010s.
+o Ordenar las películas de df_movies por IMDB Score de mayor a menor
+y mostrar las 5 primeras.
+
+4. Agrupación
+o Calcular el promedio de IMDB Score por país.
+o Mostrar la cantidad de películas por década (crear columna Decade a
+partir de Year).
+5. Limpieza y Exportación
+o Mostrar información general del DataFrame con .info().
+o Crear un DataFrame limpio quitando las filas con valores vacíos en IMDB
+Score.
+o Exportar el DataFrame final a un archivo movies_limpio.xlsx.
+
+Entrega
+ Subir el archivo de Python a un repositorio en GitHub.
+ Crear un README con una explicación breve del programa (qué hace y cómo
+usarlo).
+ Compartir el link del repositorio.
