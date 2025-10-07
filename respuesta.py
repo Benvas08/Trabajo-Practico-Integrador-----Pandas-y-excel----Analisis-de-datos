@@ -35,9 +35,9 @@ df_movies["Decade"] = df_movies["Year"].apply(get_decade)
 print("\nCantidad de peliculas por década:\n", df_movies["Decade"].value_counts())
 
 # -----------  5  -----------
-print("\nInformación general de df_movies:\n", df_movies.info())
+print("\nInformación general de df_movies:\n")
+df_movies.info()
 
-df_movies["Country"] = df_movies["Country"].fillna('Unknown')
-print("Valores faltantes reemplazados por unknown: \n", df_movies["Country"].value_counts())
 
-df_movies.to_excel('data/movies_unknow.xlsx', index=False)
+df_limpio = df_movies.dropna(subset=['IMDB Score'])
+df_limpio.to_excel('data/movies_limpio.xlsx', index=False)
