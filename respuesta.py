@@ -37,11 +37,7 @@ print("\nCantidad de peliculas por década:\n", df_movies["Decade"].value_counts
 # -----------  5  -----------
 print("\nInformación general de df_movies:\n", df_movies.info())
 
-#print("Benjamin: Tene en cuenta que la funcion unknown_countr q estas aplicando a c/ elemento de la columna Country.Esta modificando a todos los valores.Por Ejm en United States se convierte en Uni en Mexico se convierte en Mex. la intension era conservar los nombres y en caso de haber NaN agregar un Unknown. \n La forma correcta de hacerlo es usando fillna('Unknown') q solo afecta a los valores nulos y conserva los demas nombres de paises.\n suegerencia :df_movies[nombreColumna] = df_movies[nombreColumna].fillna('Unknown')")
-def unknown_country(country):
-    return str(country)[:3]  if pd.notna(country) else "Unknown"
-df_movies_unknown = df_movies["Country"].apply(unknown_country)
+df_movies["Country"] = df_movies["Country"].fillna('Unknown')
+print("Valores faltantes reemplazados por unknown: \n", df_movies["Country"].value_counts())
 
 df_movies.to_excel('data/movies_unknow.xlsx', index=False)
-
-print("Valores faltantes reemplazados por unknown: \n", df_movies_unknown.value_counts())
